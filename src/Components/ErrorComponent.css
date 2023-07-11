@@ -1,0 +1,35 @@
+.error-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    /* height: 100vh; */
+  }
+  
+  .error-content {
+    text-align: center;
+    background-color: #f8f8f8;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error-content h2 {
+    color: #f00;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .error-content p {
+    font-size: 18px;
+    color: #666;
+    font-weight: bold;
+  }
+  
+
+  
+
+
+ 
