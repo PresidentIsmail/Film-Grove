@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import StarRating from "./Components/StarRating";
 import { LoadingSpinner } from "./Components/LoadingSpinner";
 import { API_KEY } from "./App";
-import { tempMovieData } from "./MovieData";
 
 // Display details about a selected mavie
 export const MovieDetails = ({
@@ -136,7 +135,7 @@ export const MovieDetails = ({
           <em>{plot}</em>
         </p>
         <p>Starring {actors}</p>
-        <p>Directed by (director)</p>
+        <p>Directed by {director}</p>
       </section>
     </div>
   );

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { tempMovieData, tempWatchedData } from "./MovieData";
 import "./index.css";
 import "./Components/LoadingComponent.css";
 import ErrorComponent from "./Components/ErrorComponent";
