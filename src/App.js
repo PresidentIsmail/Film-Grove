@@ -20,12 +20,17 @@ export const average = (arr) =>
 export const API_KEY = "1f96915c";
 
 export default function App() {
+  const [watched, setWatched] = useState(() => {
+    const savedWatchedMovies = localStorage.getItem("watchedMovies");
+    return savedWatchedMovies ? JSON.parse(savedWatchedMovies) : [];
+  });
   const [movies, setMovies] = useState([]);
   const [query, setQuery] = useState("");
-  const [watched, setWatched] = useState([]);
   const [movieId, setMovieId] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+
+
 
   // fetches data when query changes
   useEffect(() => {
@@ -77,15 +82,31 @@ export default function App() {
     setMovieId(null);
   };
 
+  // Function that adds a movie to watched list
+  const handleAddToWatchedList = (newWatchedMovie) => {
+    setWatched((prevWatchedMovies) => {
+      const updatedWatchedMovies = [...prevWatchedMovies, newWatchedMovie];
+      localStorage.setItem(
+        "watchedMovies",
+        JSON.stringify(updatedWatchedMovies)
+      );
+      return updatedWatchedMovies; // Add the return statement here
+    });
+  };
 
   // funtion that removes a watched movie
-  const handleRemoveWatched = (movieId) => {
-    setWatched((currentWatched) =>
-      currentWatched.filter((movie) => movie.imdbID !== movieId)
-    );
+  const handleRemoveFromWatchedList = (movieId) => {
+    setWatched((prevWatchedMovies) => {
+      const updatedWatchedMovies = prevWatchedMovies.filter(
+        (movie) => movie.imdbID !== movieId
+      );
+      localStorage.setItem(
+        "watchedMovies",
+        JSON.stringify(updatedWatchedMovies)
+      );
+      return updatedWatchedMovies;
+    });
   };
-  
-
 
   return (
     <>
@@ -114,11 +135,15 @@ export default function App() {
               onCloseMovie={handleCloseMovie}
               setWatched={setWatched}
               watched={watched}
+              onAddToWatchedList={handleAddToWatchedList}
             />
           ) : (
             <>
               <WatchedSummary watched={watched} />
-              <WatchedMoviesList watched={watched} onRemoveWatched={handleRemoveWatched} />
+              <WatchedMoviesList
+                watched={watched}
+                onRemoveWatched={handleRemoveFromWatchedList}
+              />
             </>
           )}
         </BoxDisplay>

@@ -2,6 +2,7 @@ import { average } from "./App";
 
 // Summary of watched movies
 export const WatchedSummary = ({ watched }) => {
+
   const avgImdbRating = average(watched.map((movie) => movie.imdbRating));
   const avgUserRating = average(watched.map((movie) => movie.userRating));
   const avgRuntime = average(watched.map((movie) => movie.runtime));
@@ -31,6 +32,7 @@ export const WatchedSummary = ({ watched }) => {
 };
 // Already watched movies in the display
 export const WatchedMoviesList = ({ watched , onRemoveWatched}) => {
+ 
   return (
     <ul className="list">
       {watched.map((movie, index) => (

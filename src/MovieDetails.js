@@ -9,6 +9,7 @@ export const MovieDetails = ({
   onCloseMovie,
   setWatched,
   watched,
+  onAddToWatchedList
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [movieDetails, setMovieDetails] = useState([]);
@@ -66,8 +67,12 @@ export const MovieDetails = ({
       userRating,
     };
 
-    setWatched((prevWatchedMovies) => [...prevWatchedMovies, newWatchedMovie]);
+    // setWatched((prevWatchedMovies) => [...prevWatchedMovies, newWatchedMovie]);
 
+    onAddToWatchedList(newWatchedMovie); // Add the movie to the watched list
+
+    // Save the updated watchlist to localStorage
+   
     // go to summary view
     onCloseMovie();
   };
