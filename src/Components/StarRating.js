@@ -5,10 +5,12 @@ import React, { useState } from "react";
  * @param {number} maxRating - Maximum rating value (default: 5).
  * @param {string} color - Star color (default: "#FFD700").
  * @param {number} size - Star size (default: 36).
+ * @param {number} userRating - userRating value (default: 0).
  */
 const StarRating = ({
   maxRating = 5,
-  onRatingChange,
+  userRating = 0,
+  onSetRating,
   color = "#FFD700",
   size = 36,
 }) => {
@@ -25,7 +27,7 @@ const StarRating = ({
     },
   };
 
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(userRating);
   const [hoverRating, setHoverRating] = useState(0);
 
   /**
@@ -34,7 +36,7 @@ const StarRating = ({
    */
   const handleStarClick = (index) => {
     setRating(index + 1);
-    if (onRatingChange) onRatingChange(index + 1);
+    if (onSetRating) onSetRating(index + 1);
   };
 
   /**
@@ -67,7 +69,7 @@ const StarRating = ({
 
   return (
     <div style={styles.container}>
-      {starIcons}
+     <span> {starIcons}</span>
       <span style={styles.rating}>
         {hoverRating ? hoverRating : rating === 0 ? "" : rating}
       </span>

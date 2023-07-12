@@ -191,14 +191,15 @@ body {
 .btn-delete {
   position: absolute;
   right: 2.4rem;
-
+  text-align: center;
   height: 1.8rem;
   aspect-ratio: 1;
+  padding-bottom: 25px;
   border-radius: 50%;
   border: none;
   background-color: var(--color-red);
-  color: var(--color-background-900);
-  font-size: 0.9rem;
+  color: #fff;
+  font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
@@ -288,7 +289,8 @@ body {
   font-weight: 600;
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 2rem;
+  width: max-content;
 }
 
 .btn-add {
