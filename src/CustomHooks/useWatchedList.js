@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { useLocalStorage } from "./useLocalStorage";
+import { useLocalStorage } from "./useLocalStorage ";
 
 export const useWatchedList = () => {
   const [watched, setWatched] = useLocalStorage("watchedMovies", []);
