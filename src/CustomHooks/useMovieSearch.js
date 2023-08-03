@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-// OMDb Api key
-const API_KEY = "1f96915c";
 
 export const useMovieSearch = (query) => {
   const [movies, setMovies] = useState([]);
