@@ -15,7 +15,7 @@ export const useMovieSearch = (query) => {
         setError(null);
 
         const response = await fetch(
-          `http://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`
+          `https://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch movies. Please try again later.");

@@ -19,8 +19,6 @@ import { useWatchedList } from "./CustomHooks/useWatchedList";
 export const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
-// OMDb Api key
-export const API_KEY = "1f96915c";
 
 export default function App() {
   const { watched, handleAddToWatchedList, handleRemoveFromWatchedList } =
