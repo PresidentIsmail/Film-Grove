@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# FilmGrove
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="public/app-walkthrough.gif" alt="App Walkthrough">
+</p>
 
-## Available Scripts
+FilmGrove is your ultimate movie companion, empowering you to explore, save, rate, and indulge in cinematic delights with ease.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Search Movies:** Effortlessly search for your favorite movies and discover new ones to watch.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Watchlist:** Keep track of movies you want to watch by saving them to your personalized watchlist.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Rate Movies:** Rate and review movies after watching to keep a record of your thoughts.
 
-### `npm test`
+- **Remove from Watched:** Easily remove movies from the watched list if you wish to do so.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Website
 
-### `npm run build`
+The live website is accessible at [Film-Grove.netlify.app](https://film-grove.netlify.app).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How to Use
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Visit [Film-Grove.netlify.app](https://film-grove.netlify.app) to access the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Start exploring movies by using the search feature or browsing the collection.
 
-### `npm run eject`
+3. Save movies you want to watch to your watchlist.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Rate movies after watching and leave reviews.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Remove movies from the watched list if desired.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- React.js
+- JavaScript
+- HTML
+- CSS
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the [MIT License](LICENSE).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy the magic of FilmGrove, your one-stop movie haven. Happy movie watching! 🎥🍿
