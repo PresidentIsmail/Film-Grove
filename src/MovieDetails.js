@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import StarRating from "./Components/StarRating";
 import { LoadingSpinner } from "./Components/LoadingSpinner";
-import { API_KEY } from "./App";
+// import { API_KEY } from "./App";
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 // Display details about a selected mavie
 export const MovieDetails = ({
@@ -9,7 +11,7 @@ export const MovieDetails = ({
   onCloseMovie,
   setWatched,
   watched,
-  onAddToWatchedList
+  onAddToWatchedList,
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [movieDetails, setMovieDetails] = useState([]);
@@ -72,7 +74,7 @@ export const MovieDetails = ({
     onAddToWatchedList(newWatchedMovie); // Add the movie to the watched list
 
     // Save the updated watchlist to localStorage
-   
+
     // go to summary view
     onCloseMovie();
   };
